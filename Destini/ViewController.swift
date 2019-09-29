@@ -34,8 +34,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var bottomButton: UIButton!      // Has TAG = 2
     @IBOutlet weak var storyTextView: UILabel!
     
-    // TODO Step 5: Initialise instance variables here
-    
+    // I define an index variable to keep track where the user is in the story. I give the variable an initial value of 1 to indicate that the user is on story 1
+    var storyIndex : Int = 1
     
     
     
@@ -44,16 +44,20 @@ class ViewController: UIViewController {
         storyTextView.text = story1
         topButton.setTitle(answer1a, for: .normal)
         bottomButton.setTitle(answer1b, for: .normal)
-        // TODO Step 3: Set the text for the storyTextView, topButton, bottomButton, and to T1_Story, T1_Ans1, and T1_Ans2
-        
     }
 
     
     // User presses one of the buttons
     @IBAction func buttonPressed(_ sender: UIButton) {
-    
-        // TODO Step 4: Write an IF-Statement to update the views
-                
+        if sender.tag == 1 {
+            storyTextView.text = story3
+            topButton.setTitle(answer3a, for: .normal)
+            bottomButton.setTitle(answer3b, for: .normal)
+        } else {
+            storyTextView.text = story2
+            topButton.setTitle(answer2a, for: .normal)
+            bottomButton.setTitle(answer2b, for: .normal)
+        }
         // TODO Step 6: Modify the IF-Statement to complete the story
         
     
